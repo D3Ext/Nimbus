@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/D3Ext/Nimbus/main/images/logo.webp" alt="logo">
+
 # Nimbus
 
 Shellcode loader with evasion capabilities written in Nim
@@ -13,7 +15,7 @@ Shellcode loader with evasion capabilities written in Nim
 
 ## Usage
 
-This loader makes use of the AES encryption algorithm so in order to make it work, you need to encrypt your own shellcode. To do so you may use either `aes_encrypt.py` or `aes_encrypt.nim`. Both scripts will generate a random PSK and IV and it will take care of encrypting your shellcode so that you only have to modify the `enc_shellcode`, `psk` and `iv` variables at the very top of the file. Anyway, if you want you can encrypt your shellcode by your own.
+This loader makes use of the AES encryption algorithm so in order to make it work, you need to encrypt your own shellcode. To do so you may use either `aes_encrypt.py` or `aes_encrypt.nim`. Both scripts will generate a random PSK and IV and it will take care of encrypting your shellcode so that you only have to modify the variables at the very top of the file.
 
 Encrypt your raw shellcode:
 
@@ -24,7 +26,7 @@ $ nim r aes_encrypt.nim calc.bin
 or 
 
 ```sh
-python3 aes_encrypt.py calc.bin
+$ python3 aes_encrypt.py calc.bin
 ```
 
 Once you have modified `nimbus.nim` to suit your needs, you just have to compile it like this:
@@ -44,7 +46,7 @@ $ make
 For testing purposes I have used a simple `calc.exe` shellcode. You can generate it using `msfvenom` like this:
 
 ```sh
-msfvenom -p windows/x64/exec CMD="calc.exe" -f raw -o calc.bin
+$ msfvenom -p windows/x64/exec CMD="calc.exe" -f raw -o calc.bin
 ```
 
 Tested on x64
