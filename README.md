@@ -17,6 +17,12 @@ Shellcode loader with evasion capabilities written in Nim
 
 This loader makes use of the AES encryption algorithm so in order to make it work, you need to encrypt your own shellcode. To do so you may use either `aes_encrypt.py` or `aes_encrypt.nim`. Both scripts will generate a random PSK and IV and it will take care of encrypting your shellcode so that you only have to modify the variables at the very top of the file.
 
+Before you run your code, you need to make sure that you have nim and libraries installed on your machine. you can set up you enviroment by simply first running the requirements.sh to check or install nim on your linux machine then install libraries necessary for Nimbus to run perfectly.
+
+```
+bash requirements.sh
+``` 
+
 Encrypt your raw shellcode:
 
 ```sh
