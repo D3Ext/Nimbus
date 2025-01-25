@@ -41,6 +41,14 @@ Or simply using `make`:
 $ make
 ```
 
+## Installation
+
+You need to have installed `nim` and some specific packages:
+
+```
+$ nimble install winim nimcrypto psutil ptr_math
+```
+
 ## Demo
 
 For testing purposes I have used a simple `calc.exe` shellcode. You can generate it using `msfvenom` like this:
